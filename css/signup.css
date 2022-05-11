@@ -1,0 +1,48 @@
+input {
+    width: 300px;
+    padding: 15px;
+    border: 1px solid #d4a29c;
+    display: inline-block;
+    border-radius: 50px;
+    margin: 10px;
+}
+
+input:focus { 
+    outline: none; 
+}
+
+.lftfloat {
+    float: left;
+    width: 45%;
+}
+
+.lftfloat1 {
+    float: left;
+    width: 55%;
+}
+
+.textright {
+    text-align: right;
+}
+
+.cursedspace {
+    height: 30px;
+    padding: 10px;
+}
+
+.click {
+    border: none;
+    background-color: #d4a29c;
+    color: white;
+    height: 40px;
+    width: 130px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 59%;
+    margin-top: 15px;
+}
+
+.click:hover{
+    background-color: #b0837e;
+}
