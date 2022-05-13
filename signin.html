@@ -21,8 +21,6 @@
                 <label for="uname" class="txtstyle">Username</label>
                 <div class="cursedspace"></div>
                 <label for="pw" class="txtstyle">Password</label>
-                <div class="cursedspace"></div>
-                <label for="pwconf" class="txtstyle">Confirm Password</label>
             </div>
             
             <div class="lftfloat1">
@@ -30,7 +28,6 @@
                 <br/>
                 <input id="pw" type="password" placeholder="Your Password..." class="txtstyle">
                 <br/>
-                <input id="cpw" type="password" placeholder="Confirm your Password..." class="txtstyle">
             </div>
 
             <div>
@@ -42,7 +39,6 @@
             <script>
                 var username = document.getElementById("txt");
                 var pw = document.getElementById("pw");
-                var cpw = document.getElementById("cpw");
 
                 username.addEventListener("keypress", function(event) {
                     if (event.key == "Enter") {
@@ -51,12 +47,6 @@
                 });
 
                 pw.addEventListener("keypress", function(event) {
-                    if (event.key == "Enter") {
-                        cpw.focus();
-                    }
-                });
-
-                cpw.addEventListener("keypress", function(event) {
                     if (event.key == "Enter") {
                         document.getElementById("button").click();
                     }
