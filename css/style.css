@@ -65,6 +65,11 @@ div.center {
     justify-content: center;
 }
 
+div.text_center {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 .buttoncontainer {
     position: relative;
     width: 100%;
@@ -84,3 +89,5 @@ div.center {
     font-family: 'Courier New', Courier, monospace;
     font-size: 15px;
 }
+
+.font_red { color: red; }
