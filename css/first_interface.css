@@ -1,0 +1,97 @@
+.mid_logo {
+    display: block;
+    position: relative;
+    width: 100px;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@font-face {
+    font-family: Mangabey;
+    src: url("./font_style/MangabeyRegular.otf")
+}
+
+@font-face {
+    font-family: Sunnyspells;
+    src: url("./font_style/SunnyspellsRegular.otf")
+}
+
+.username1 {
+    position: relative;
+    display: block;
+    font-family: Sunnyspells;
+    font-size: 50px;
+    color: #a26360;
+    text-align: center;
+    margin-top: 140px;
+    width: 100%;
+    background: white;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 8px transparent;
+}
+
+.circle {
+    position: absolute;
+    height: 160px;
+    width: 450px;
+    border-radius: 500px 500px 0 0;
+    margin-top: 70px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#a26360), to(g#d4a29c));
+    background-image: -webkit-linear-gradient(top, #a26360, #d4a29c); 
+    background-image: -moz-linear-gradient(top, #a26360, #d4a29c); 
+    background-image: -ms-linear-gradient(top, #a26360, #d4a29c); 
+    background-image: -o-linear-gradient(top, #a26360, #d4a29c); 
+}
+
+.move_center {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.un_button {
+    border: none;
+    font-family: Mangabey;
+    font-size: 40px;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+    height: 80px;
+    width: 450px;
+    cursor: pointer;
+    text-shadow: 5px 5px 8px #a26360;
+    transition: 0.4s;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#a26360), to(g#d4a29c));
+    background-image: -webkit-linear-gradient(top, #a26360, #d4a29c); 
+    background-image: -moz-linear-gradient(top, #a26360, #d4a29c); 
+    background-image: -ms-linear-gradient(top, #a26360, #d4a29c); 
+    background-image: -o-linear-gradient(top, #a26360, #d4a29c); 
+}
+
+.move_button {
+    margin-top: 45px;    
+}
+
+.move_button1 {
+    margin-top: 30px;    
+}
+
+.move_button2 {
+    margin-top:30px;  
+    border-radius: 0 0 20px 20px;
+}
+
+.un_button:hover {
+    color: #e8b298;
+    height: 90px;
+    width: 460px;
+}
+
+.un_button:active {
+    font-size: 50px;
+    height: 95px;
+    width: 465px;
+}
