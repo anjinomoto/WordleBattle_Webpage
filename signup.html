@@ -33,11 +33,9 @@
                 <input id="cpw" type="password" placeholder="Confirm your Password..." class="txtstyle">
             </div>
 
-            <div>
-                <a href="intro.html">
-                    <button id="button" class="click txtstyle">Submit</button>
-                </a>
-            </div>
+            <div id="acc_status" class="font_red cursed_paragraph" hidden>Account registered!</div>
+
+            <button id="button" class="click txtstyle">Submit</button>
 
             <script>
                 var username = document.getElementById("txt");
@@ -62,6 +60,10 @@
                     }
                 });
             </script>
+
+            <!-- Wordle implementation -->
+            <script src="./jslib/wordlelib.js"></script>
+            <script src="./js/signup.js"></script>
         </div>
     </body>
 </html>
