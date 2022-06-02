@@ -1,0 +1,140 @@
+.ply_btn {
+    position: relative;
+    display: block;
+    font-family: Sunnyspells;
+    font-size: 35px;
+    text-align: center;
+    color: #a26360;
+    border: none;
+    background: white;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 5px transparent;
+    height: 100%;
+    width: 100%;
+}
+
+.ply_box {
+    position: absolute;
+    height: 60px;
+    width: 150px;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-left: 1350px;
+    z-index: 2;
+    box-shadow: 0 9px #999;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#a26360), to(g#d4a29c));
+    background-image: -webkit-linear-gradient(top, #a26360, #d4a29c); 
+    background-image: -moz-linear-gradient(top, #a26360, #d4a29c); 
+    background-image: -ms-linear-gradient(top, #a26360, #d4a29c); 
+    background-image: -o-linear-gradient(top, #a26360, #d4a29c); 
+}
+
+.ply_box:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.level {
+    position: relative;
+    display: block;
+    font-family: Mangabey;
+    font-size: 35px;
+    color: white;
+    text-align: center;
+    border: none;
+    margin-top: 7px;
+    z-index: 1;
+    background: #d4a29c;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 3px transparent;
+}
+
+.lvl_box {
+    position: absolute;
+    height: 50px;
+    width: 180px;
+    border-radius: 0 500px 500px 0;
+    margin-top: 20px;
+    background-color: #999;
+}
+
+.inp_box {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    font-family: Mangabey;
+    font-size: 40px;    
+    text-align: center;    
+    border: none;
+    border-radius: 5px;   
+    caret-color: transparent;
+}
+
+.inp_color {
+    color: #a26360;
+    background-color: #e8b298;
+    box-shadow: 1px 1px #a26360;
+}
+
+.move_top1 {
+    margin-top: 110px;
+}
+
+.move_top2 {
+    margin-top: 180px;
+}
+
+.move_top3 {
+    margin-top: 250px;
+}
+
+.move_top4 {
+    margin-top: 320px;
+}
+
+.move_top5 {
+    margin-top: 390px;
+}
+
+.move_box1 {
+    margin-left: 590px;
+}
+
+.move_box2 {
+    margin-left: 650px;
+}
+
+.move_box3 {
+    margin-left: 710px;
+}
+
+.move_box4 {
+    margin-left: 770px;
+}
+
+.move_box5 {
+    margin-left: 830px;
+}
+
+.move_box6 {
+    margin-left: 890px;
+}
+
+/* This is for checking the answers :) (the colors) */
+.right {
+    color: white;
+    background-color: #4fa64f;
+    box-shadow: 1px 1px #438b43;
+}
+
+.wrong {
+    color: white;
+    background-color: #a72f2f;
+    box-shadow: 1px 1px #8b2727;
+}
+
+.half {
+    color: white;
+    background-color: #ffe54c;
+    box-shadow: 1px 1px #d6c043;
+}
