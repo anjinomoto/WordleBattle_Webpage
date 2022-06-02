@@ -30,11 +30,9 @@
                 <br/>
             </div>
 
-            <div>
-                <a href="intro.html">
-                    <button id="button" class="click txtstyle">Submit</button>
-                </a>
-            </div>
+            <div id="acc_status" class="font_red cursed_paragraph" hidden>Invalid username/password</div>
+
+            <div><button id="button" class="click txtstyle">Submit</button></div>
 
             <script>
                 var username = document.getElementById("txt");
@@ -52,6 +50,10 @@
                     }
                 });
             </script>
+
+            <script src="./jslib/wordlelib.js"></script>
+            <script src="./js/signin.js"></script>
+
         </div>
     </body>
 </html>

@@ -30,6 +30,12 @@ input:focus {
     padding: 10px;
 }
 
+.cursed_paragraph {
+    text-align: center;
+    padding-left: 200px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 .click {
     border: none;
     background-color: #d4a29c;
