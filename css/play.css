@@ -11,6 +11,7 @@
     -webkit-text-stroke: 5px transparent;
     height: 100%;
     width: 100%;
+    cursor: pointer;
 }
 
 .ply_box {
@@ -74,6 +75,10 @@
     color: #a26360;
     background-color: #e8b298;
     box-shadow: 1px 1px #a26360;
+}
+
+.inp_box:focus {
+    outline: none;
 }
 
 .move_top1 {
