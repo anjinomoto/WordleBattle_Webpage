@@ -7,7 +7,7 @@ function login() {
 
 	loginCreds(username.value, password.value, undefined, (response) => {
 		if (response == 'successful') {
-			console.log('SUCCESSS LOGIN!');
+			window.location.replace('intro.html');
 		} else {
 			document.getElementById('acc_status').hidden = false;
 		}
