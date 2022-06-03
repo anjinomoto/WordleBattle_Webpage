@@ -45,9 +45,12 @@ function submit_answer() {
 		guessed_answer += input_element.value;
 	}
 
-	console.log(guessed_answer);
-	node.prev = null;
-	node.current = `txtbox_${row + 1}0`;
+	// check if the answer is submittable
+	if (guessed_answer.length == 6) {
+		console.log(guessed_answer);
+		node.prev = null;
+		node.current = `txtbox_${row + 1}0`;
+	}
 }
 
 // event handler for handling text input
