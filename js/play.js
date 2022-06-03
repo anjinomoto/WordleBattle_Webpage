@@ -47,9 +47,40 @@ function submit_answer() {
 
 	// check if the answer is submittable
 	if (guessed_answer.length == 6) {
-		console.log(guessed_answer);
-		node.prev = null;
-		node.current = `txtbox_${row + 1}0`;
+		userGuess(guessed_answer, (response) => {
+			var answerIsCorrect = true;
+			response = JSON.parse(response);
+			console.log(response);
+
+			// check for the status of the characters answered
+			for (var i = 0; i < 6; i++) {
+				const input_element = document.getElementById(`txtbox_${row}${i}`);
+
+				switch(response[i]) {
+					case 2:
+						input_element.classList.add('right');
+						break;
+					case 1:
+						input_element.classList.add('half');
+						break;
+					default:
+						input_element.classList.add('wrong');
+						break;
+				}
+
+				if (response[i] == 0 || response[i] == 1)
+					answerIsCorrect = false;
+			}
+
+			// check if the answer got correctly
+			if (answerIsCorrect) {
+				alert('You got the correct answer!');
+				window.location.reload();
+			} else {
+				node.prev = null;
+				node.current = `txtbox_${row + 1}0`;		
+			}
+		});
 	}
 }
 
