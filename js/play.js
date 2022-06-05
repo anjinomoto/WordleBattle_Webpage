@@ -34,6 +34,12 @@ function del() {
 	}
 }
 
+function proceed_newline() {
+	const row = parseInt(node.current.charAt(7));
+	node.prev = null;
+	node.current = `txtbox_${row + 1}0`;
+}
+
 // will be triggered if the enter is pressed
 function submit_answer() {
 	// retrieve all the current row values
@@ -48,11 +54,25 @@ function submit_answer() {
 	// check if the answer is submittable
 	if (guessed_answer.length == 6) {
 		userGuess(guessed_answer, (response) => {
-			var answerIsCorrect = true;
-			response = JSON.parse(response);
-			console.log(response);
+			// server-side error handling
+			switch(response) {
+				case '[]':
+					alert('Session Expired');
+					window.location.replace('.');
+					return;
+				case '[-2]':
+					alert('Max attempts exceeded!');
+					window.location.replace('.');
+					return;
+				case '[-3]':
+					alert('No words are available to solve!');
+					return;
+			}
 
 			// check for the status of the characters answered
+			response = JSON.parse(response);
+			var answerIsCorrect = true;
+
 			for (var i = 0; i < 6; i++) {
 				const input_element = document.getElementById(`txtbox_${row}${i}`);
 
@@ -68,21 +88,60 @@ function submit_answer() {
 						break;
 				}
 
-				if (response[i] == 0 || response[i] == 1)
+				if (response[i] != 2)
 					answerIsCorrect = false;
 			}
 
 			// check if the answer got correctly
 			if (answerIsCorrect) {
 				alert('You got the correct answer!');
-				window.location.reload();
+				setTimeout(() => {
+					incrementLevel();
+					resetWordleInput();
+					window.location.replace('play.html');
+				}, 500);
 			} else {
-				node.prev = null;
-				node.current = `txtbox_${row + 1}0`;		
+				proceed_newline();
 			}
 		});
 	}
 }
+
+// retrieves the levels and game state
+getSavedGameStatus(json_data => {
+	json_data = JSON.parse(json_data);
+	window.localStorage.setItem('point', json_data['points']);
+
+	// loads the level that is saved
+	document.getElementById('level_label').textContent = `LEVEL ${json_data['points'] + 1}`;
+
+	// loads the state retrieved
+	const state_array = json_data['state'];
+	const resp_state  = json_data['resp'];
+
+	for (var r = 0; r < state_array.length; r++) {
+		for (var c = 0; c < state_array[r].length; c++) {
+			const id = `txtbox_${r}${c}`;
+			const element = document.getElementById(id)
+			element.value = state_array[r].charAt(c);
+
+			// gets the state of the prev word
+			switch(resp_state[r][c]) {
+				case 0:
+					element.classList.add('wrong');
+					break;
+				case 1:
+					element.classList.add('half');
+					break;
+				case 2:
+					element.classList.add('right');
+					break;
+			}
+		}
+		proceed_newline();
+	}
+});
+
 
 // event handler for handling text input
 window.addEventListener('keydown', (evt) => {
