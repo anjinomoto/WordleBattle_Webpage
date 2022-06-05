@@ -1,6 +1,6 @@
 // to confirm if proper handshake was made (for encryption and session purposes)
 tokenRequestMulti();
-handshake();
+setTimeout(handshake, 500);
 
 // retrieve username and password
 // try to login the credentials
