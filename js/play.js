@@ -67,6 +67,11 @@ function submit_answer() {
 				case '[-3]':
 					alert('No words are available to solve!');
 					return;
+				case '[-4]':
+					alert('Word in dictionary does not exist!');
+					del(); del(); del();
+					del(); del(); del();
+					return;
 			}
 
 			// check for the status of the characters answered
