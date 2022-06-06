@@ -3,6 +3,7 @@
     <head>
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/first_interface.css">
+        <link rel="icon" href="./images/logo.png">
         <title>Wordle Battle</title>
     </head>
 
@@ -14,11 +15,11 @@
 
             <div class="move_center">
                 <div class="circle"></div>
-                <label class="username1">user_name</label>
+                <label id="user_label" class="username1">user_name</label>
             </div>
 
             <div class="move_center">
-                <button class="un_button move_button">PLAY</button>
+                <a href="/loader/play.html"><button class="un_button move_button">PLAY</button></a>
             </div>
 
             <div class="move_center">
@@ -30,5 +31,10 @@
             </div>
 
         </div>
+
+        <script>
+            const username = window.localStorage.getItem('user');
+            document.getElementById('user_label').textContent = username;
+        </script>
     </body>
 </html>

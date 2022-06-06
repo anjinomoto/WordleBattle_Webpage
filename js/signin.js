@@ -1,5 +1,5 @@
 tokenRequestMulti();
-handshake();
+setTimeout(handshake, 500);
 
 function login() {
 	const username = document.getElementById('txt');
