@@ -11,9 +11,12 @@ function signup() {
 
 	if (password.value === cpassword.value) {
 		// registers the username and password
-		registerCreds(username, password, undefined, (data) => {
+		registerCreds(username.value, password.value, undefined, (data) => {
 			if (data === 'successful') {
-				window.location.replace('intro.html');
+				loginCreds(username.value, password.value, undefined, (response) => {
+					if (response === 'successful')
+						window.location.replace('intro.html');
+				});
 			} else {
 				document.getElementById('acc_status').hidden = false;
 				alert('Account is already registered or the username already exists!')
