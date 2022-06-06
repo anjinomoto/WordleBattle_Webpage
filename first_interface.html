@@ -19,15 +19,15 @@
             </div>
 
             <div class="move_center">
-                <a href="/loader/play.html"><button class="un_button move_button">PLAY</button></a>
+                <a href="/loader/play.html"><button class="un_button move_button" id="play">PLAY</button></a>
             </div>
 
             <div class="move_center">
-                <button class="un_button move_button1">LEADERBOARD</button>
+                <button class="un_button move_button1" id="lb">LEADERBOARD</button>
             </div>
 
             <div class="move_center">
-                <button class="un_button move_button2">OPTION</button>
+                <button class="un_button move_button2" id="option">OPTION</button>
             </div>
 
         </div>
@@ -35,6 +35,30 @@
         <script>
             const username = window.localStorage.getItem('user');
             document.getElementById('user_label').textContent = username;
+        </script>
+
+        <script>
+            var el = document.getElementById("play");
+            var audio = new Audio("./sound/tap.wav");
+            el.onclick = function() {
+            audio.play();
+            }
+        </script>
+
+        <script>
+            var el = document.getElementById("lb");
+            var audio = new Audio("./sound/tap.wav");
+            el.onclick = function() {
+            audio.play();
+            }
+        </script>
+
+        <script>
+            var el = document.getElementById("option");
+            var audio = new Audio("./sound/tap.wav");
+            el.onclick = function() {
+            audio.play();
+            }
         </script>
     </body>
 </html>
