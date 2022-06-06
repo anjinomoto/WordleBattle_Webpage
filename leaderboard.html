@@ -13,6 +13,12 @@
                 <img src="./images/logo.png" class="side_logo">
             </div>
 
+            <div class="back" id="back">
+                <a href="first_interface.html" style="text-decoration: none;">
+                    <label class="lb"><</label>
+                </a>
+            </div>
+
             <div class="container">
                 <div class="lb_topbox">
                     <label class="lb">LEADERBOARD</label>
@@ -23,30 +29,23 @@
                         <div class="ranking top1">
                             <label class="txt">1 |</label>
                         </div>
-
                         <div class="ranking top2">
                             <label class="txt">2 |</label>
                         </div>
-
                         <div class="ranking top3">
                             <label class="txt">3 |</label>
                         </div>
-
                         <div class="ranking top4">
                             <label class="txt">4 |</label>
                         </div>
-
                         <div class="ranking top5">
                             <label class="txt">5 |</label>
                         </div>
-
                         <div class="ranking_line"></div>
-
                         <div class="ranking me">
                             <label class="txtme">Me |</label>
                         </div>
                     </div>
-
                     <label class="uname uname1">baldo</label>
                     <label class="uname uname2">emenggard</label>
                     <label class="uname uname3">brrrrrt</label>
@@ -54,13 +53,16 @@
                     <label class="uname uname5">--</label>
                     <label class="txttt">10 |</label>
                     <label class="uname myuname">username</label>
-
-                </div>
-                
+                </div>               
             </div>
 
-            
-
+            <script>
+                var el = document.getElementById("back");
+                var audio = new Audio("./sound/tap.wav");
+                el.onclick = function() {
+                audio.play();
+                }
+            </script>
         </div>
     </body>
 </html>
