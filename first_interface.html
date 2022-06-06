@@ -14,7 +14,7 @@
 
             <div class="move_center">
                 <div class="circle"></div>
-                <label class="username1">user_name</label>
+                <label id="user_label" class="username1">user_name</label>
             </div>
 
             <div class="move_center">
@@ -30,5 +30,10 @@
             </div>
 
         </div>
+
+        <script>
+            const username = window.localStorage.getItem('user');
+            document.getElementById('user_label').textContent = username;
+        </script>
     </body>
 </html>
