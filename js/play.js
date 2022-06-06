@@ -65,7 +65,7 @@ function submit_answer() {
 					window.location.replace('.');
 					return;
 				case '[-3]':
-					alert('No words are available to solve!');
+					noAvailableWordsPopup();
 					return;
 				case '[-4]':
 					alert('Word in dictionary does not exist!');
@@ -76,6 +76,7 @@ function submit_answer() {
 
 			// check for the status of the characters answered
 			response = JSON.parse(response);
+			console.log(response);
 			var answerIsCorrect = true;
 
 			for (var i = 0; i < 6; i++) {
@@ -99,12 +100,10 @@ function submit_answer() {
 
 			// check if the answer got correctly
 			if (answerIsCorrect) {
-				alert('You got the correct answer!');
+				setTimeout(correctAnswerPopUp, 500);
 				setTimeout(() => {
-					incrementLevel();
 					resetWordleInput();
-					window.location.replace('play.html');
-				}, 500);
+				}, 1000);
 			} else {
 				proceed_newline();
 			}
@@ -119,6 +118,8 @@ getSavedGameStatus(json_data => {
 
 	// loads the level that is saved
 	document.getElementById('level_label').textContent = `LEVEL ${json_data['points'] + 1}`;
+	console.log('State : ');
+	console.log(json_data);
 
 	// loads the state retrieved
 	const state_array = json_data['state'];
