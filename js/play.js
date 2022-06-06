@@ -61,14 +61,13 @@ function submit_answer() {
 					sessionExpiredPopup();
 					return;
 				case '[-2]':
-					alert('Max attempts exceeded!');
-					window.location.replace('.');
+					maxAttemptPopup();
 					return;
 				case '[-3]':
 					noAvailableWordsPopup();
 					return;
 				case '[-4]':
-					alert('Word in dictionary does not exist!');
+					wordDoesnotExist();
 					del(); del(); del();
 					del(); del(); del();
 					return;
