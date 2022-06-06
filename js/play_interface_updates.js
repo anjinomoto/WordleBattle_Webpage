@@ -16,3 +16,21 @@ function resetWordleInput() {
 		}
 	}
 }
+
+// function for poping up the correct answer
+function correctAnswerPopUp() {
+	document.getElementById('popup').hidden = false;
+	document.getElementById('message').innerText = 'You got the correct answer!';
+}
+
+// function for warning that there are no words available
+function noAvailableWordsPopup() {
+	document.getElementById('popup').hidden = false;
+	document.getElementById('message').innerText = 'No words are available to solve :(';
+}
+
+function PopOut() {
+	document.getElementById('popup').hidden = true;
+	window.location.replace('play.html');
+}
+
