@@ -21,6 +21,27 @@
     width: 100%;
 }
 
+.back {
+    position: absolute;
+    height: 60px;
+    width: 70px;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-left: 2%;
+    z-index: 2;
+    box-shadow: 0 9px #999;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#a26360), to(g#d4a29c));
+    background-image: -webkit-linear-gradient(top, #a26360, #d4a29c); 
+    background-image: -moz-linear-gradient(top, #a26360, #d4a29c); 
+    background-image: -ms-linear-gradient(top, #a26360, #d4a29c); 
+    background-image: -o-linear-gradient(top, #a26360, #d4a29c); 
+}
+
+.back:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
 .container {
     width: 100%;
 }
