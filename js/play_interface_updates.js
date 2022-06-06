@@ -56,11 +56,23 @@ function sessionExpiredPopup() {
 	document.getElementById('message').innerText = 'Session Expired';
 
 	const button_element = document.getElementById('button_proceed');
-	button_element.innerText = '>';
+	button_element.innerText = '!';
 	button_element.onclick = () => {
 		PopOut();
 		logoutCreds();
 		window.location.replace('.');
+	}
+}
+
+// if the entered word does not exist in the dictionary
+function wordDoesnotExist() {
+	document.getElementById('popup').hidden = false;
+	document.getElementById('message').innerText = 'Word does not exist in the dictionary!';
+
+	const button_element = document('button_proceed');
+	button_element.innerText = 'ok';
+	button_element.onclick = () => {
+		PopOut();
 	}
 }
 
