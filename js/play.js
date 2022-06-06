@@ -55,10 +55,10 @@ function submit_answer() {
 	if (guessed_answer.length == 6) {
 		userGuess(guessed_answer, (response) => {
 			// server-side error handling
+			console.log(response);
 			switch(response) {
 				case '[]':
-					alert('Session Expired');
-					window.location.replace('.');
+					sessionExpiredPopup();
 					return;
 				case '[-2]':
 					alert('Max attempts exceeded!');
@@ -105,7 +105,8 @@ function submit_answer() {
 					resetWordleInput();
 				}, 1000);
 			} else {
-				proceed_newline();
+				if (row >= 4) maxAttemptPopup();
+				else proceed_newline();
 			}
 		});
 	}

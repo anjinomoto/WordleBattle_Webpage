@@ -21,12 +21,47 @@ function resetWordleInput() {
 function correctAnswerPopUp() {
 	document.getElementById('popup').hidden = false;
 	document.getElementById('message').innerText = 'You got the correct answer!';
+
+	document.getElementById('button_proceed').innerText = '>';
 }
 
 // function for warning that there are no words available
 function noAvailableWordsPopup() {
 	document.getElementById('popup').hidden = false;
-	document.getElementById('message').innerText = 'No words are available to solve :(';
+	document.getElementById('message').innerHTML = 'You have reached the max level<br/>Comming soon...';
+
+	const button_element = document.getElementById('button_proceed');
+	button_element.innerText = '>';
+	button_element.onclick = () => {
+		PopOut();
+		window.location.replace('first_interface.html');
+	}
+}
+
+// function for alerting the max attempt
+function maxAttemptPopup() {
+	document.getElementById('popup').hidden = false;
+	document.getElementById('message').innerText = 'Max guessing attempt!';
+
+	const button_element = document.getElementById('button_proceed');
+	button_element.innerHTML = '&#8634;';
+	button_element.onclick = () => {
+		retryWord(); PopOut();
+	}
+}
+
+// if session has expired for the account
+function sessionExpiredPopup() {
+	document.getElementById('popup').hidden = false;
+	document.getElementById('message').innerText = 'Session Expired';
+
+	const button_element = document.getElementById('button_proceed');
+	button_element.innerText = '>';
+	button_element.onclick = () => {
+		PopOut();
+		logoutCreds();
+		window.location.replace('.');
+	}
 }
 
 function PopOut() {
