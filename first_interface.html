@@ -17,7 +17,7 @@
             </div>
 
             <div class="move_center">
-                <label class="lvl">level</label>
+                <label id="lvl" class="lvl">level</label>
             </div>
 
             <div class="move_center">
@@ -63,6 +63,15 @@
             el.onclick = function() {
             audio.play();
             }
+        </script>
+
+        <script src="/jslib/wordlelib.js"></script>
+        <script>
+            getSavedGameStatus(response => {
+                response = JSON.parse(response);
+                console.log(response);
+                document.getElementById('lvl').textContent = `level ${response['points'] + 1}`;
+            });
         </script>
     </body>
 </html>
