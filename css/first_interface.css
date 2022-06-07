@@ -17,6 +17,19 @@
     src: url("./font_style/SunnyspellsRegular.otf")
 }
 
+.lvl {
+    position: absolute;
+    display: block;
+    font-family: Mangabey;
+    font-size: 35px;
+    color: white;
+    text-align: center;
+    margin-top: 235px;
+    z-index: 4;
+    width: 100%;
+    text-shadow: 5px 5px 8px #a26360;
+}
+
 .username1 {
     position: relative;
     display: block;
