@@ -81,17 +81,20 @@
                 </div>
             </div>
         </div>
+
+        <div id="settingsPopup" class="pseudobody" hidden>
+            <div class="alert_box_container center">
+                <div class="settingsContainer">
+                    <br/>
+                    <div class="center"><label class="mangabeyFont settingsHeader textCenter">Settings</label></div>
+                    <br/>
+                    <div class="center"><button id="exit" class="settingsButton mangabeyFont settingsNormal">Exit</button></div>
+                </div>
+            </div>
+        </div>
  
         <script src="./jslib/wordlelib.js"></script>
         <script src="./js/play_interface_updates.js"></script>
         <script src="./js/play.js"></script>
-
-        <script>
-            var el = document.getElementById("settings");
-            var audio = new Audio("./sound/tap.wav");
-            el.onclick = function() {
-            audio.play();
-            }
-        </script>
     </body>
 </html>

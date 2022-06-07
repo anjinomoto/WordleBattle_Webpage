@@ -83,3 +83,19 @@ function PopOut() {
 	window.location.replace('play.html');
 }
 
+function popUpSettings() {
+	document.getElementById('settingsPopup').hidden = false;
+}
+
+// other application
+var audio = new Audio("./sound/tap.wav");
+
+settings.onclick = () => {
+	audio.play();
+	popUpSettings();
+}
+
+exit.onclick = () => {
+	audio.play();
+	window.location.replace('first_interface.html');
+}
