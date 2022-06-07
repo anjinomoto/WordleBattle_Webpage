@@ -14,6 +14,6 @@ packedRequest_GET('/rank-list', (data) => {
 	}
 
 	// gets the user's current rank
-	myrank.textContent = userRank;
+	myrank.textContent = userRank + ' |';
 	myuname.textContent = window.localStorage.getItem('user');
 });

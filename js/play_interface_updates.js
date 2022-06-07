@@ -31,7 +31,7 @@ function noAvailableWordsPopup() {
 	document.getElementById('message').innerHTML = 'You have reached the max level<br/>Comming soon...';
 
 	const button_element = document.getElementById('button_proceed');
-	button_element.innerText = '>';
+	button_element.innerText = 'ok';
 	button_element.onclick = () => {
 		PopOut();
 		window.location.replace('first_interface.html');
@@ -46,7 +46,9 @@ function maxAttemptPopup() {
 	const button_element = document.getElementById('button_proceed');
 	button_element.innerHTML = '&#8634;';
 	button_element.onclick = () => {
-		retryWord(); PopOut();
+		retryWord(); 
+		PopOut();
+		resetWordleInput()
 	}
 }
 
@@ -69,7 +71,7 @@ function wordDoesnotExist() {
 	document.getElementById('popup').hidden = false;
 	document.getElementById('message').innerText = 'Word does not exist in the dictionary!';
 
-	const button_element = document('button_proceed');
+	const button_element = document.getElementById('button_proceed');
 	button_element.innerText = 'ok';
 	button_element.onclick = () => {
 		PopOut();
