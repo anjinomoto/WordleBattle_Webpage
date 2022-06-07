@@ -4,6 +4,9 @@
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/first_interface.css">
         <link rel="stylesheet" href="./css/leaderboard.css">
+        <script>
+            var audio = new Audio("./sound/tap.wav");
+        </script>
         <title>Wordle Battle</title>
     </head>
 
@@ -58,7 +61,6 @@
 
             <script>
                 var el = document.getElementById("back");
-                var audio = new Audio("./sound/tap.wav");
                 el.onclick = function() {
                 audio.play();
                 }

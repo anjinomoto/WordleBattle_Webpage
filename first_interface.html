@@ -4,6 +4,9 @@
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/first_interface.css">
         <link rel="icon" href="./images/logo.png">
+        <script>
+            var audio = new Audio("./sound/tap.wav");
+        </script>
         <title>Wordle Battle</title>
     </head>
 
@@ -11,6 +14,10 @@
         <div class="main">
             <div class="topline">
                 <img src="./images/logo.png" class="mid_logo">
+            </div>
+
+            <div class="move_center">
+                <label class="lvl">level</label>
             </div>
 
             <div class="move_center">
@@ -39,7 +46,6 @@
 
         <script>
             var el = document.getElementById("play");
-            var audio = new Audio("./sound/tap.wav");
             el.onclick = function() {
             audio.play();
             }
@@ -47,7 +53,6 @@
 
         <script>
             var el = document.getElementById("lb");
-            var audio = new Audio("./sound/tap.wav");
             el.onclick = function() {
             audio.play();
             }
@@ -55,7 +60,6 @@
 
         <script>
             var el = document.getElementById("option");
-            var audio = new Audio("./sound/tap.wav");
             el.onclick = function() {
             audio.play();
             }
