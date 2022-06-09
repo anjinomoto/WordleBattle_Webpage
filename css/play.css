@@ -150,12 +150,13 @@
     top: 0; left: 0;
     background-color: rgba(118, 118, 118, 0.5);
 
-    z-index: 3;
+    z-index: 4;
 }
 
 .alert_box_container {
     align-items: center;
     height: 100%; width: 100%;
+    margin-top: 10px;
 }
 
 .alert_box {
@@ -191,3 +192,39 @@
     width: 120px;
     transform: translateY(-10px);
 }
+
+.settingsContainer {
+    background-color: #945e5b;
+    border: 2px solid white;
+    border-radius: 50px;
+    height: 80%;
+    width: 500px;
+}
+
+.settingsButton {
+    height: 50px; width: 50%;
+    border: none;
+    border-radius: 10px;
+    background-color: #bdd1c5;
+    color: black;
+    cursor: pointer;
+    box-shadow: 0px 5px #39423d;
+}
+
+.settingsButton:active {
+    transform: translateY(2.5px);
+    box-shadow: 0px 2.5px #39423d;
+}
+
+.settingsHeader {
+    font-size: 70px;
+    color: white;
+}
+
+.settingsNormal {
+    font-size: 30px;
+    color: white;
+}
+
+.textCenter { text-align: center; }
+.mangabeyFont { font-family: Mangabey; }

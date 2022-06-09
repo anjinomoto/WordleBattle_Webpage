@@ -3,6 +3,7 @@
     <head>
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/first_interface.css">
+        <link rel="stylesheet" href="./css/play.css">
         <link rel="icon" href="./images/logo.png">
         <script>
             var audio = new Audio("./sound/tap.wav");
@@ -17,7 +18,7 @@
             </div>
 
             <div class="move_center">
-                <label class="lvl">level</label>
+                <label id="lvl" class="lvl">level</label>
             </div>
 
             <div class="move_center">
@@ -37,6 +38,19 @@
                 <button class="un_button move_button2" id="option">OPTION</button>
             </div>
 
+        </div>
+
+        <div id="optionsPopup" class="pseudobody" hidden>
+            <div class="alert_box_container center">
+                <div class="settingsContainer">
+                    <br/>
+                    <div class="center"><label class="mangabeyFont settingsHeader textCenter">Settings</label></div>
+                    <br/>
+                    <div class="center"><button id="back" class="settingsButton mangabeyFont settingsNormal">Back</button></div>
+                    <br/>
+                    <div class="center"><button id="logout" class="settingsButton mangabeyFont settingsNormal">Logout</button></div>
+                </div>
+            </div>
         </div>
 
         <script>
@@ -61,7 +75,28 @@
         <script>
             var el = document.getElementById("option");
             el.onclick = function() {
-            audio.play();
+                audio.play();
+                optionsPopup.hidden = false;
+            }
+        </script>
+
+        <script src="/jslib/wordlelib.js"></script>
+        <script>
+            getSavedGameStatus(response => {
+                response = JSON.parse(response);
+                console.log(response);
+                document.getElementById('lvl').textContent = `level ${response['points'] + 1}`;
+            });
+
+            back.onclick = () => {
+                audio.play();
+                optionsPopup.hidden = true;
+            }
+
+            logout.onclick = () => {
+                audio.play();
+                logoutCreds();
+                window.location.replace('.');
             }
         </script>
     </body>
